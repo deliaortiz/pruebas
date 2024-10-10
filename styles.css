@@ -1,0 +1,134 @@
+/*Estilos Generales*/
+body {
+    font-family:Arial, sans-serif;/*Establece la fuente del texto*/
+    background-color: #eee5ed;/*Establece color a la pagina*/
+    margin: 0;/*elimina el margen por defecto*/
+    padding: 0;/*elimina el padding por defecto*/
+}
+
+.container {
+    max-width: 1200;/*ancho maximo del contenedor*/
+    margin: 0 auto;/*centra el contenedor horizontalmente*/
+    padding: 20px;    /*espacio interno del contenido del contenedor*/
+    background-color: #dfd6d6;/*agrega color al contenedor*/
+    border-radius: 8px;/*bordes redondeados del contenedor*/
+    box-shadow: 0 0 15px rgba(0,0,0.1);/*sombra alrededor del contenedor*/
+}
+
+header {
+    text-align: center;/*centra el texto del encabezado*/
+    margin-bottom: 20px;/*espacio debajo del encabezado*/
+}
+
+h1 {
+    color: #333;/*color de texto del encabezado*/
+}
+
+input[type="text"],
+button {
+    padding: 10px;/*espacio entre el texto y el boton*/
+    border-radius: 5px;/*border redondeados del cuadro de texto y boton*/
+    border: 1pdx solid #ddd;/*borde del texto y boton*/
+    margin-right:10px ;/*espacio a la derecha del campo de text y boton*/
+    font-size: 16px ;/*tamaño del texto y boton*/
+}
+
+input[type= "texto"] { 
+    flex: 1;/*hace el el campo de texto ocupe el maximo espacio del contenedor*/
+    width: 100%;/*hace que el campo de texto ocupe el 100% de ancho en su contenedor*/
+    box-sizing: border-box;/*Incluye el borde y el padding en el tamaño total del campo*/
+}
+
+button {
+    background-color: #a49cd8;/*color del boton*/
+    color: #571e15;/*color del texto del boton*/
+    cursor: pointer;/*cambia de color al pasar sobre el boton*/
+}
+
+botton:hover {
+    background-color: rgb(64, 65, 81);/*color de fondo del boton al pasar por encima del mouse*/
+}
+
+main {
+    display:flex;/*alinea el diseño del contenedo principal*/
+    flex-direction: column;/*añade los elementos en una column*/
+}
+
+#task-inputs {
+    display: flex;/*alinea los inputs y el boton*/
+    flex-wrap: wrap;/*permite que los elementos se ajusten a la siguiente linea si no hay suficiente espacio*/
+    gap: 10px;/*espacio entre los elementos dentro del contenedor*/
+    margin-bottom: 20px;/*espacio debajo del contenedor de inputs y boton*/
+
+}
+
+#task-list {
+    display:flex;/*utliza flex para el diseño de la lista de tareas*/
+    flex-direction: column;/*alinea las tareas en columna*/
+    max-height: 500px;/*altura maxima del contenedor de la lista de tareas*/
+    overflow-y: auto;/*agrega una barra de desplazamiento vertical si el contenido se desborda*/
+    border: 1px solid #ddd;/*borde del contenedor de la lista de tareas*/
+    border-radius: 5px;/*bordes redondeados al contenedor de la lista*/
+    background-color: #b4a0b7;
+    padding: 10px;/*espacia entre cada elemento*/
+}
+
+.task-item {
+    background-color: #fff;/*color de fondo de cada tarea*/
+    border: 1px solid #ddd;/*borde de cada elemento de la tarea*/
+    border-radius: 5px;/*bordes redondeados*/
+    padding: 10px;/*espacio entre cada elemento de la tarea*/
+    margin-bottom: 10px;/*espacio debajo de cada elemento*/
+    box-shadow: 0 0 5px rgba(0,0,0.1);/*sombra al rededor de cada elemento*/
+    display: flex;/*para el diseño del elemento de la tarea*/
+    justify-content: space-between;/*espacia el contenido del elemento de la tarea*/
+    align-items: center;/*alinea el contenido verticalmente*/
+}
+
+.task-item p {
+    margin: 0;/*elimina el margen por defecto*/
+    flex: 1;/*hace que el parrafo ocupe el maximo espacio disponible en el contenedor*/
+}
+
+.task-item .actions {
+    display: flex;/*para alinear los botones de accion*/
+    gap: 5px;/*espacio entre los botones de accion*/
+}
+
+.task-item button {
+    background-color: #007bff;/*fondo dentro del elemento de la tarea*/
+    color:#fff;/*color del boton dentro del elemento de la tarea*/
+    border: none;/*elimina el borde del boton*/
+    padding: 5px 10px;/*espacio interno dentro del boton*/
+    border-radius: 3px;/*bordes redondeados del boton*/
+    cursor: pointer;/*cambia el curso a una mano cuando pasa encima del boton*/
+    font-size: 14px;/*tamaño de fuente del boton*/
+
+}
+
+
+.task-item button:hover {
+    background-color: #6b91ba;/*color el boton al pasar por encima el mouse*/
+}
+
+.delete-btn {
+    background-color: #bb0f20;/*color del boton a eliminar*/
+}
+
+.delete-btn:hover {
+    background-color: #c82333;/*color de fondod el boton la pasar por encima el mouse*/
+}
+
+/*Diseño Responsivo*/
+@media (max-width : 768px) {
+    #task-inputs {
+        flex-direction: column;/*cambia la direccion del diseño en patallas mas pequeñas*/
+        align-items: center;/*centra los elemento en pantallas pequeñas*/
+    }
+
+    #task-inputs input[type="text"],
+    #task-inputs button {
+        width: 100%;/*hace que el texto y el boton ocupe todo el contenedor*/
+        margin-bottom: 10px;/*espacio debajo del texto*/
+    }
+}
